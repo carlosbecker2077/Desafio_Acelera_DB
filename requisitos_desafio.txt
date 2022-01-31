@@ -1,0 +1,68 @@
+Livraria
+
+Livro:
+  código (seria o id?)
+  *titulo_original nvarchar (vou deixar por enquanto)
+
+Autor
+  ID
+  nome
+  dt_nascimento (meio irrelevante, da pra colocar no campo da bio)
+  pais_origem - fk_id_pais
+  obs_bio
+
+Editora
+  ID
+  nome
+  endereco - nova tabela - cidade - uf (não acho que deva ser obrigatório, e se a editora é de outro país ou não existe mais?)
+    cadastrar somente o endereço da matriz pq é irrelevante saber qual foi a filial que editou
+  pais - fk_id_pais (não acho que deva ser obrigatório)
+  telefone -  nova tabela (não acho que deva ser obrigatório, e se a editora é de outro país ou não existe mais?)
+    mesma coisa que o endereço, cadastrar apenas o da matriz se tiver filial
+
+Edição
+  ID
+  num_edicao
+  tit_edicao
+  ISBN
+  preco
+  ano_public
+  num_paginas
+  qtde_estoque
+  local_public
+
+um livro só pode existir se tiver alguma edição cadastrada pra ele
+
+*Remissiva
+  ID
+  nome_remissiva
+
+*Genero
+  ID
+  nome
+
+Endereço
+  ID
+  logradouro
+  numero
+  complemento
+  UF
+
+1. quantos livros são do genero x?
+2. quais livros foram publicados pela editora x
+3. qual é o livro mais caro?
+4. qual é o livro mais barato?
+5. qual é o livro com mais páginas?
+6. quais e quantos livros são estrangeiros?
+7. qual é o país estrangeiro que mais tem livros na livraria?
+8. qual é o livro que mais tem em estoque?
+9. qual é o livro que menos tem em estoque?
+10. qual é o livro mais antigo da livraria?
+
+livro n x n autor - um livro pode ter mais de um autor e mais de um autor pode ter mais de um livro | um livro não pode existir sem autor, se não souber cadastra um "desconhecido"
+
+livro n x 1 editora - um livro só pode ter uma editora mas uma editora pode ter mais de um livro | a editora não precisa de livros para existir
+
+editora x endereco -
+
+livro x edicao - um livro pode ter mais de uma edição mas uma edição só pode pertencer a um livro | o livro não pode existir sem uma edição
