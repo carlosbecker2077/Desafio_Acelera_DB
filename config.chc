@@ -1,5 +1,5 @@
 #Config
-#Mon Jan 31 16:17:52 BRST 2022
-cfg.location.y=-8
-cfg.location.x=-8
-cfg.recentes=C\:\\Dataside\\DesafioAcelera\\livraria_conceitual.brM3;C\:\\Dataside\\DesafioAcelera\\livraria_logico.brM3;D\:\\Projetos\\desafio_acelera\\livraria_conceitual.brM3;D\:\\Projetos\\desafio_acelera\\livraria_logico.brM3
+#Wed Feb 02 18:17:00 BRST 2022
+cfg.location.y=0
+cfg.location.x=55
+cfg.recentes=C\:\\Dataside\\Desafio_Acelera_DB\\livraria_logico.brM3;C\:\\Dataside\\Desafio_Acelera_DB\\livraria_conceitual.brM3;C\:\\Dataside\\DesafioAcelera\\livraria_conceitual.brM3;C\:\\Dataside\\DesafioAcelera\\livraria_logico.brM3;D\:\\Projetos\\desafio_acelera\\livraria_conceitual.brM3;D\:\\Projetos\\desafio_acelera\\livraria_logico.brM3
