@@ -57,14 +57,6 @@ where l.ISBN in ('22321', '22322', '22329', '99913')
 group by nome_genero
 order by count(gl.id_genero) desc
 
---view tentativa de trazer a quantidade total por livro, não por edição
-create view vwLIVROS as
-
-select e.tit_edicao, l.titulo_original, a.nome, l.ISBN
-from edicao e
-left join livro l on l.ID = e.id_livro
-left join Autor_Livro al on al.ID_livro = l.id
-left join autor a on a.id = al.id_autor
 --order by a.nome
 
 select * from vwLIVROS
