@@ -1,7 +1,19 @@
 --funções
---uma funcao para calcular o numero total de páginas das edições por livro
+--funcao para descobrir a idade do autor - scalar
+create function fnIdadeAutor
+(@dtnasc date)
+returns int
+as
+begin
+	declare @idade int
+	select @idade = DATEDIFF(year,@dtnasc, convert(date, getdate()))
+	return @idade
+end
 
---uma funcao que traz a soma do estoque de livros por autor
+select nome, dt_nascimento, dbo.fnIdadeAutor(dt_nascimento) idade
+from autor
+
+--uma funcao que traz a soma do estoque de livros por autor - table valued
 create function fnEstAutor --teria sido mais bem implementada em uma view
 (@ID_AUTOR_in int)
 returns table

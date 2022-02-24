@@ -63,6 +63,9 @@ select * from vwLIVROS
 order by nome
 
 --union?
-select id, nome from autor
+select g.ID, g.nome_genero
+from Genero g
 union
-select id, titulo_original from livro
+select gh.id_genero, gh.nome_genero
+from Genero_Hist gh
+order by g.nome_genero
