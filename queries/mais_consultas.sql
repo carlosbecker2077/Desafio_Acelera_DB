@@ -23,10 +23,11 @@ from pais
 where nome_pais like '%Unidos%'
 
 --consula com join
-select a.nome, l.titulo_original, l.ISBN
+select a.nome, l.titulo_original, e.ISBN
 from Autor_Livro al
 left join autor a on a.ID = al.ID_autor
 left join livro l on l.ID = al.ID_livro
+left join edicao e on e.id_livro = l.id
 where a.id in (3, 4, 7) and titulo_original like '%ation%' 
 order by a.nome
 
@@ -53,7 +54,8 @@ select g.nome_genero, count(gl.id_genero)
 from Genero_Livro gl
 left join Genero g on g.ID = gl.ID_genero
 left join Livro l on l.id = gl.ID_livro
-where l.ISBN in ('22321', '22322', '22329', '99913')
+left join edicao e on e.id_livro = l.id
+where e.ISBN in ('22321', '22322', '22329', '99913')
 group by nome_genero
 order by count(gl.id_genero) desc
 

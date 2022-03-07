@@ -57,9 +57,10 @@ from edicao l
 where l.tit_edicao like 'Harry%'
 
 --consulta com Left join
-select a.nome, l.titulo_original, l.ISBN
+select a.nome, l.titulo_original, e.ISBN
 from Autor_Livro al
 left join autor a on a.ID = al.ID_autor
 left join livro l on l.ID = al.ID_livro
+left join edicao e on e.id_livro = l.id
 where a.id in (3, 4, 7) and titulo_original like '%ation%' 
-order by l.ISBN
+order by e.ISBN
