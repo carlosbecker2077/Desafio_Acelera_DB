@@ -71,3 +71,11 @@ union
 select gh.id_genero, gh.nome_genero
 from Genero_Hist gh
 order by g.nome_genero
+
+select g.id, g.nome_genero
+from genero g
+left join genero_hist gh on gh.id_genero = g.ID
+order by g.nome_genero
+
+select * from Genero_Hist
+select * from Genero
