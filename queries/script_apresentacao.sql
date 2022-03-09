@@ -64,3 +64,4 @@ select * from vwEST_LIVROS
 
 --vw2
 select * from vwLIVROS
+
